@@ -5,12 +5,13 @@ import java.util.Scanner;
 
 public class Account {
 	
-	int account_number = 123456789;
-	double balance = 50.0;
-	String customer_name = "Halil";
-	String email = "asdf@asdf.com";
-	int phone_number = 415770;
-	int daily_limit=0;
+
+	private int account_number = 123456789;
+	private double balance = 50.0;
+	private String customer_name = "Halil";
+	private String email = "asdf@asdf.com";
+	private int phone_number = 415770;
+	private int daily_limit=0;
 
 	
 	public void Account() {
