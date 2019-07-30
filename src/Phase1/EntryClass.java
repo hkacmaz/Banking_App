@@ -13,10 +13,12 @@ public class EntryClass {
 		
 		Scanner scan1 =  new Scanner(System.in);
 		
+		Account account_object = new Account();
+		
 		while (program) {
 			
 			System.out.println("Here are the options");
-			System.out.println(" A -> Account Balance \n D -> Deposit Balance \n W -> Withdraw Money \n E -> Exit ");
+			System.out.println(" A -> Account Balance \n D -> Deposit Balance \n W -> Withdraw Money \n S -> Account Summary \n E -> Exit ");
 			
 			s = scan1.nextLine();
 			
@@ -31,6 +33,10 @@ public class EntryClass {
 				
 			case "W":
 				System.out.println("withdraw");
+				break;
+				
+			case "S":
+				System.out.println("summary");
 				break;
 				
 			case "E":

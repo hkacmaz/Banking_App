@@ -9,5 +9,7 @@ public class Account {
 	String customer_name = "Halil";
 	String email = "asdf@asdf.com";
 	int phone_number = 415770;
+	
+	
 
 }
