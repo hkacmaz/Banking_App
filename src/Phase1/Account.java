@@ -10,6 +10,7 @@ public class Account {
 	String customer_name = "Halil";
 	String email = "asdf@asdf.com";
 	int phone_number = 415770;
+	int daily_limit=0;
 
 	
 	public void Account() {
@@ -30,9 +31,25 @@ public class Account {
 	}
 	
 	public void Deposit_Balance(int deposited_amount) {
-		System.out.println("The entered amount is= $"+ deposited_amount);
+		System.out.println("The requested amount to deposit is= $"+ deposited_amount);
 		this.balance += deposited_amount;
 		System.out.println("The new balance is= $"+ this.balance );
+		
+	}
+	
+	public void Withdraw_Money(int withdrawn_amount) {
+		
+		System.out.println("The requested amount to withdrawn is= $"+ withdrawn_amount);
+		
+		if ((this.daily_limit <= 100) && (withdrawn_amount <= this.balance)) {
+			this.daily_limit += withdrawn_amount;
+			this.balance -= withdrawn_amount;
+			System.out.println("Remaining balance in your account is= $"+this.balance);
+		}
+		else {
+			System.out.println("Sorry you have exceeded the daily withdraw limit!");
+		}
+		
 		
 	}
 

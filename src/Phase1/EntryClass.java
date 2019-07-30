@@ -11,8 +11,8 @@ public class EntryClass {
 		
 		String s;
 		
-		Scanner scan1 =  new Scanner(System.in);
-		Scanner scan2 = new Scanner(System.in);
+		Scanner scan1 =  new Scanner(System.in); // for options
+		Scanner scan2 = new Scanner(System.in); // for other inputs
 		
 		Account account_object = new Account();
 		
@@ -31,13 +31,17 @@ public class EntryClass {
 			case "D": //Deposit Balance
 				System.out.println("deposit balance");
 				int amount_entered = 0;
-				System.out.println("Please enter the amount= ");
+				System.out.println("Please enter the amount you wish to deposit into = ");
 				amount_entered = scan2.nextInt();
 				account_object.Deposit_Balance(amount_entered);
 				break;
 				
 			case "W": //Withdraw Money
 				System.out.println("withdraw");
+				int amount_to_withdraw=0;
+				System.out.println("Please enter the amount you wish to withdraw= ");
+				amount_to_withdraw = scan2.nextInt();
+				account_object.Withdraw_Money(amount_to_withdraw);
 				break;
 				
 			case "S": //Account Summary
